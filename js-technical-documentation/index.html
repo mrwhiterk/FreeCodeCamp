@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Technical Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <aside>
+      <section id="table-of-contents">
+        <h1>JS Documentation</h1>
+        <ul>
+          <li>Introduction</li>
+          <li>What you should already know</li>
+          <li>JavaScript and Java</li>
+          <li>Hello World</li>
+          <li>Variables</li>
+          <li>Declaring variables</li>
+          <li>Variable scope</li>
+          <li>Global variables</li>
+          <li>Constants</li>
+          <li>Data types</li>
+          <li>if...else statement</li>
+          <li>while statement</li>
+          <li>Function declarations</li>
+        </ul>
+      </section>
+    </aside>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>
+          <h3>Introduction</h3>
+        </header>
+        <p>
+          JavaScript is a cross-platform, object-oriented scripting language. It
+          is a small and lightweight language. Inside a host environment (for
+          example, a web browser), JavaScript can be connected to the objects of
+          its environment to provide programmatic control over them.
+        </p>
+        <p>
+          JavaScript contains a standard library of objects, such as Array,
+          Date, and Math, and a core set of language elements such as operators,
+          control structures, and statements. Core JavaScript can be extended
+          for a variety of purposes by supplementing it with additional objects;
+          for example:
+        </p>
+        <ul>
+          <li>
+            Client-side JavaScript extends the core language by supplying
+            objects to control a browser and its Document Object Model (DOM).
+            For example, client-side extensions allow an application to place
+            elements on an HTML form and respond to user events such as mouse
+            clicks, form input, and page navigation.
+          </li>
+          <br />
+          <li>
+            Server-side JavaScript extends the core language by supplying
+            objects relevant to running JavaScript on a server. For example,
+            server-side extensions allow an application to communicate with a
+            database, provide continuity of information from one invocation to
+            another of the application, or perform file manipulations on a
+            server.
+          </li>
+        </ul>
+      </section>
+      <section class="main-section" id="What_you_should_already_know">
+        <header>
+          <h3>What you should already know</h3>
+        </header>
+        <p>This guide assumes you have the following basic background:</p>
+        <ul>
+          <li>
+            A general understanding of the Internet and the World Wide Web
+            (WWW).
+          </li>
+          <li>Good working knowledge of HyperText Markup Language (HTML).</li>
+          <li>
+            Some programming experience. If you are new to programming, try one
+            of the tutorials linked on the main page about JavaScript.
+          </li>
+        </ul>
+      </section>
+      <section class="main-section" id="JavaScript_and_Java">
+        <header>
+          <h3>JavaScript and Java</h3>
+        </header>
+        <p>
+          Beginners tend to assume that because JavaScript has “Java” in its
+          name they are somehow related. While most programmers groan at this
+          coupling and many even feel that the name confusion is part of a
+          marketing gimmick, the history of the two programming languages did
+          intersect for a brief moment in time during the early days of
+          Netscape. The evolution of the two languages took such wildly
+          different paths from that point forward.
+        </p>
+        <p>
+          Javascript is interpreted language meaning that it parsed at runtime
+          into binaries that your computer can understand. It is also
+          dynamically typed meaning that checking the types of variables (if you
+          added type checking) will happen during runtime.
+        </p>
+        <p>
+          Java is a compiled language meaning that it needs to be converted into
+          binaries before the code can be executed. It is also statically typed
+          meaning that it will check for types and error even before the code is
+          executed.
+        </p>
+      </section>
+      <section class="main-section" id="Hello_World">
+        <header>
+          <h3>Hello World</h3>
+        </header>
+        <p>
+          "Hello World" is typically the first "program" you make when learning
+          a new programming language.
+        </p>
+        <p>
+          You can print "Hello World" to the console in JavaScript with:
+          <br />
+          <code>console.log('Hello World') // "Hello World"</code>
+          <br />
+          <code>console.log(typeof 'Hello World') // "string"</code>
+        </p>
+        <p></p>
+      </section>
+      <section class="main-section" id="Variables">
+        <header>
+          <h3>Variables</h3>
+        </header>
+        <p>
+          A variable is a named location for storing a value. That way an
+          unpredictable value can be accessed through a predetermined name.
+        </p>
+        <p>
+          Example:
+          <br />
+          <code>var name = 'Ryan'</code>
+          <br />
+          Above, we are storing the string 'Ryan' in a variable we called
+          'name'.
+        </p>
+        <p></p>
+      </section>
+      <section class="main-section" id="Declaring_Variables">
+        <header>
+          <h3>Declaring Variables</h3>
+        </header>
+        <p>
+          The are three ways to declare variables in JavaScript: var, let, const
+        </p>
+        <p>
+          Example:
+          <br />
+          <code>var name = 'Ryan';</code>
+          <br />
+          Above, we are storing the string 'Ryan' in a variable we called
+          'name'.
+        </p>
+        <p>
+          <code>let num = 5;</code>
+          <br />
+          Above, we are storing the number 5 in a variable we called 'num'.
+        </p>
+        <p>
+          <code>const PI = 3.14;</code>
+          <br />
+          Above, we are storing the number 3.14 in a constant we called 'PI'.
+          Note that constants are typically typed in all uppercase to remind the
+          user that this value should not be changed.
+        </p>
+        <p></p>
+      </section>
+      <section class="main-section" id="Variable_Scope">
+        <header>
+          <h3>Variable Scope</h3>
+        </header>
+        <p>
+          JavaScript has two scopes – global and local. Any variable declared
+          outside of a function belongs to the global scope, and is therefore
+          accessible from anywhere in your code. Each function has its own
+          scope, and any variable declared within that function is only
+          accessible from that function and any nested functions.
+        </p>
+
+        Example:
+        <br />
+        <code>function doSomething () {</code>
+        <br />
+        <code>let name = 'Ryan';</code>
+        <br />
+        <code>}</code>
+        <br />
+        <code>doSomething()</code>
+        <br />
+        <code>console.log(name)</code>
+        <br />
+        <code>ReferenceError: name is not defined</code>
+        <p>
+          Above, we are creating a function and declaring a variable called name
+          inside of it. After, we are invoking that function and then we try to
+          print the name variable. However, received a Reference error because
+          name is in a scope that you do not have access to globally.
+        </p>
+
+        <p></p>
+      </section>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
