@@ -21,4 +21,4 @@ function nthPrime(n) {
 
 console.log(nthPrime(1000));
 
-// works but it's efficient enough
+// works but it's inefficient
